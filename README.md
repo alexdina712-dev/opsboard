@@ -1,8 +1,18 @@
 # OpsBoard
 
+[![OpsBoard CI](https://github.com/alexdina712-dev/opsboard/actions/workflows/ci.yml/badge.svg)](https://github.com/alexdina712-dev/opsboard/actions/workflows/ci.yml)
+
+[Source code](https://github.com/alexdina712-dev/opsboard) · [Case study](PORTFOLIO_CASE_STUDY.md) · [API reference](docs/API.md)
+
 **A calmer way to keep a small company's projects, people, and daily work moving.**
 
 OpsBoard is a full-stack internal operations application with multi-organization accounts, project ownership, task workflows, comments, and a live dashboard. It is designed as a portfolio project with a working PostgreSQL backend and a complete UI, rather than a collection of mocked screens.
+
+## Portfolio context
+
+OpsBoard is a personal software-development portfolio project. It was developed with substantial AI assistance for implementation, debugging, testing and documentation. The repository presents working software and verifiable checks; it does not claim commercial client work or independent authorship of every line. See the [interview study guide](docs/INTERVIEW_GUIDE.md) for a practical route through the code and engineering decisions.
+
+Public hosting has not yet been provisioned. The screenshots are actual local browser captures, and the demo can be run using the setup below.
 
 ## Demo
 

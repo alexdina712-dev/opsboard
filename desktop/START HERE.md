@@ -27,3 +27,5 @@ Read **Documentation/README.md** for setup, architecture, tests, and Vercel/Rend
 Drive backup: https://drive.google.com/drive/folders/1VkzY29idL4kwQERKNkNMHNPG_U8yRuH5
 
 This OpsBoard folder is the working home for this app. Future applications can each have their own sibling folder under **Apps I am Working On**.
+
+GitHub source and automated checks: https://github.com/alexdina712-dev/opsboard
