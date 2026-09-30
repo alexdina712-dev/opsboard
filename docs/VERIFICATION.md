@@ -32,7 +32,6 @@ The compiled-server smoke check starts the emitted JavaScript with production fl
 
 ## Prepared, not executed here
 
-- GitHub Actions workflow: requires pushing this repository to GitHub.
 - Docker image and Compose environment: Docker was not installed on this machine.
 - Vercel/Render/Neon deployment: no public service or database was provisioned. Generate `vercel.json` with the actual backend URL and follow the README.
 - Real mobile Safari, Firefox, and automated accessibility audits.
@@ -54,3 +53,10 @@ node scripts/smoke-built.mjs
 Use a dedicated test database and the local default Origin. The API tests remove their own records. Browser tests write fixtures, so retain a separate database for testing versus the public demo.
 
 To refresh screenshots, start the local application at `http://127.0.0.1:5173` with the demo seeded, then run `node scripts/screenshots.mjs`.
+
+## GitHub publication and hosted verification
+
+Published publicly at https://github.com/alexdina712-dev/opsboard on September 30, 2026. The first hosted Linux run passed dependency installation, Prisma generation, migrations, seeding, the production build, all 19 unit/API tests and all 10 desktop/mobile Playwright tests.
+
+Verified run: https://github.com/alexdina712-dev/opsboard/actions/runs/36739318722
+Verified implementation commit: 992fd80357938e451206afbfa19025318ff85123. Later documentation commits do not change application behavior. The Desktop repository tracks origin/main, and portable source/Git-history snapshots are copied to Desktop Backups and Google Drive. GitHub and Drive copies are updated explicitly; they do not automatically synchronize later edits.

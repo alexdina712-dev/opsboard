@@ -243,7 +243,7 @@ Visit http://127.0.0.1:4000. The supplied Compose file is explicitly for local d
 - Metrics use UTC week boundaries and date-only deadlines use end-of-day UTC, rather than organization-specific time zones.
 - Mobile testing uses Chromium emulation, not actual Safari hardware. Automated accessibility audits and broader browser coverage are future work.
 - Fonts load from Google Fonts with system fallbacks. External font loading can be disabled/self-hosted for stricter privacy requirements.
-- Docker and hosted CI/public deployment configurations are prepared; they are not represented as executed in this local environment.
+- GitHub Actions has passed the build, 19 unit/API tests and 10 browser tests on Linux. Docker and public deployment are prepared but have not been executed.
 
 ## Future improvements
 
