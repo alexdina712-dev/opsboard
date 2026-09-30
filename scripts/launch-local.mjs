@@ -80,7 +80,7 @@ async function stop() {
 const controller = createServer(async (req, res) => {
   const supplied = req.headers.authorization?.replace(/^Bearer /, '') || '';
   const authorized =
-    supplied.length === token.length && timingSafeEqual(Buffer.from(supplied), Buffer.from(token));
+    Buffer.byteLength(supplied) === Buffer.byteLength(token) && timingSafeEqual(Buffer.from(supplied), Buffer.from(token));
   if (!authorized || req.headers.origin) {
     res.writeHead(403).end();
     return;
