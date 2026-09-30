@@ -2,7 +2,7 @@
 
 [![OpsBoard CI](https://github.com/alexdina712-dev/opsboard/actions/workflows/ci.yml/badge.svg)](https://github.com/alexdina712-dev/opsboard/actions/workflows/ci.yml)
 
-[Source code](https://github.com/alexdina712-dev/opsboard) · [Case study](PORTFOLIO_CASE_STUDY.md) · [API reference](docs/API.md)
+[Live demo](https://opsboard-dina19.vercel.app) · [Source code](https://github.com/alexdina712-dev/opsboard) · [Case study](PORTFOLIO_CASE_STUDY.md) · [API reference](docs/API.md)
 
 **A calmer way to keep a small company's projects, people, and daily work moving.**
 
@@ -12,11 +12,15 @@ OpsBoard is a full-stack internal operations application with multi-organization
 
 OpsBoard is a personal software-development portfolio project. It was developed with substantial AI assistance for implementation, debugging, testing and documentation. The repository presents working software and verifiable checks; it does not claim commercial client work or independent authorship of every line. See the [interview study guide](docs/INTERVIEW_GUIDE.md) for a practical route through the code and engineering decisions.
 
-Public hosting has not yet been provisioned. The screenshots are actual local browser captures, and the demo can be run using the setup below.
+The public demo is deployed on Vercel, Render and Neon. Ten browser workflows passed against the live HTTPS deployment. The screenshots are actual browser captures; you can also run the app locally using the setup below.
 
 ## Demo
 
-After seeding, click **Explore the demo workspace** on the sign-in screen.
+Open **[https://opsboard-dina19.vercel.app](https://opsboard-dina19.vercel.app)** and click **Explore the demo workspace**. No hosting account is required.
+
+The free Render API sleeps after inactivity, so the first request can take about a minute to wake it.
+
+For local setup, after seeding, click **Explore the demo workspace** on the sign-in screen.
 
 | Field        | Value               |
 | ------------ | ------------------- |
@@ -243,7 +247,7 @@ Visit http://127.0.0.1:4000. The supplied Compose file is explicitly for local d
 - Metrics use UTC week boundaries and date-only deadlines use end-of-day UTC, rather than organization-specific time zones.
 - Mobile testing uses Chromium emulation, not actual Safari hardware. Automated accessibility audits and broader browser coverage are future work.
 - Fonts load from Google Fonts with system fallbacks. External font loading can be disabled/self-hosted for stricter privacy requirements.
-- GitHub Actions has passed the build, 19 unit/API tests and 10 browser tests on Linux. Docker and public deployment are prepared but have not been executed.
+- GitHub Actions has passed the build, 19 unit/API tests and 10 browser tests on Linux. The public Vercel/Render/Neon deployment and ten hosted browser workflows passed. Docker has not been executed.
 
 ## Future improvements
 

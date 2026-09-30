@@ -10,4 +10,4 @@ Dependencies were independently installed in the Desktop repository. All 19 unit
 
 Install Node.js 22+ and pnpm 11.19.0 on a new computer, extract the Desktop package and run its launcher. Initial startup needs internet for dependencies and creates a fresh demo database. The source archives and Git bundle exclude local settings, database state, dependencies and runtime logs.
 
-Drive contains uploaded snapshots, not automatic synchronization. These packages do not back up later changes made inside the running app. Public deployment is prepared but has not been provisioned.
+Drive contains uploaded snapshots, not automatic synchronization. These packages do not back up later changes made inside the running app. Public demo: https://opsboard-dina19.vercel.app. The hosted browser and session-security checks passed.

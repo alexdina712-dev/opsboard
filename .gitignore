@@ -10,3 +10,5 @@ test-results/
 .local-db/
 *.log
 .runtime/
+
+.vercel/

@@ -22,10 +22,12 @@ Local-only files are in **app/.env**, **app/.local-db/**, and **app/.runtime/**.
 
 ## Develop and deploy
 
-Read **Documentation/README.md** for setup, architecture, tests, and Vercel/Render/Neon deployment. Backend development with live reload uses `pnpm dev` after stopping the Desktop supervisor and starting the database separately as described there. Public deployment is prepared; it has not been provisioned.
+Read **Documentation/README.md** for setup, architecture, tests, and Vercel/Render/Neon deployment. Backend development with live reload uses `pnpm dev` after stopping the Desktop supervisor and starting the database separately as described there. Public demo: https://opsboard-dina19.vercel.app. It can take about a minute to wake after inactivity.
 
 Drive backup: https://drive.google.com/drive/folders/1VkzY29idL4kwQERKNkNMHNPG_U8yRuH5
 
 This OpsBoard folder is the working home for this app. Future applications can each have their own sibling folder under **Apps I am Working On**.
 
 GitHub source and automated checks: https://github.com/alexdina712-dev/opsboard
+
+Live portfolio demo: https://opsboard-dina19.vercel.app

@@ -4,7 +4,7 @@ Local verification completed on **September 30, 2026**. This record distinguishe
 
 ## Environment
 
-Windows, Node.js 24.19.0, pnpm 11.19.0, real PostgreSQL 18.4, Prisma 6.19.0, and Chromium supplied by Playwright. A fresh UTF-8 database was migrated and seeded. PostgreSQL 16 is the configured CI/Docker database version; compatibility on that environment is to be confirmed by the hosted CI run.
+Windows, Node.js 24.19.0, pnpm 11.19.0, real PostgreSQL 18.4, Prisma 6.19.0, and Chromium supplied by Playwright. A fresh UTF-8 database was migrated and seeded. PostgreSQL 16 is the configured CI/Docker database version; compatibility was subsequently verified by hosted Linux CI and the live PostgreSQL 16 demo.
 
 ## Executed checks
 
@@ -24,7 +24,7 @@ The initial browser flows revealed unstable task-navigation naming and test sele
 
 The final browser suite includes project edits and archiving, task creation/completion/editing, comments, keyboard dismissal of dialogs, search and priority filters, view switching, CSV export, protected routes, registration, joining an existing organization, creating a second organization, and switching organizations. It checks viewport overflow and JavaScript errors for the main responsive navigation flow.
 
-The compiled-server smoke check starts the emitted JavaScript with production flags. It verifies built SPA deep-route serving, Origin enforcement, Secure/HttpOnly/SameSite cookies, `no-store`, and logout revocation. Its HTTP requests attach cookies manually; this verifies server behavior and configuration, **not real HTTPS termination**. Public hosting still needs a deployment smoke test.
+The compiled-server smoke check starts the emitted JavaScript with production flags. It verifies built SPA deep-route serving, Origin enforcement, Secure/HttpOnly/SameSite cookies, `no-store`, and logout revocation. Its HTTP requests attach cookies manually; this verifies server behavior and configuration, **not real HTTPS termination**. Real HTTPS hosting was subsequently verified as recorded below.
 
 ## Screenshots
 
@@ -33,7 +33,6 @@ The compiled-server smoke check starts the emitted JavaScript with production fl
 ## Prepared, not executed here
 
 - Docker image and Compose environment: Docker was not installed on this machine.
-- Vercel/Render/Neon deployment: no public service or database was provisioned. Generate `vercel.json` with the actual backend URL and follow the README.
 - Real mobile Safari, Firefox, and automated accessibility audits.
 - Load, penetration, backup/recovery, and production monitoring exercises.
 
@@ -60,3 +59,11 @@ Published publicly at https://github.com/alexdina712-dev/opsboard on September 3
 
 Verified run: https://github.com/alexdina712-dev/opsboard/actions/runs/36739318722
 Verified implementation commit: 992fd80357938e451206afbfa19025318ff85123. Later documentation commits do not change application behavior. The Desktop repository tracks origin/main, and portable source/Git-history snapshots are copied to Desktop Backups and Google Drive. GitHub and Drive copies are updated explicitly; they do not automatically synchronize later edits.
+
+## Public HTTPS deployment verification
+
+On September 30, 2026, https://opsboard-dina19.vercel.app was deployed with a Vercel frontend, free Render API and separate Neon PostgreSQL database. All ten existing desktop/mobile Playwright workflows passed against the public HTTPS URL, without hosting-account authentication. This verified registration, workspace joining/switching, project/task edits, comments, filtering, export, navigation and responsive layouts.
+
+Additional checks verified database-backed health through the same-origin proxy, 401 for unauthenticated organization access, 403 for wrong/missing mutation Origin, no-store API responses, Secure/HttpOnly/SameSite=Lax cookies, refresh persistence and rejection of a revoked session. Generated fixtures were removed from the cloud database.
+
+The deployed services use fresh sample data, not the developer's local database. Free hosting can sleep after inactivity. CV, demonstration video and interview preparation are still personal portfolio tasks.

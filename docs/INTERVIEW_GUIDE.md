@@ -20,4 +20,4 @@ Explain archive/restore, completedAt, transactional activity logs, UTC deadlines
 
 ## Still needed for an employer presentation
 
-A public HTTPS demo, a short 60–90 second demonstration video, and a software-focused CV linking this repository would make review easier. Pin OpsBoard on the GitHub profile when published. Describe AI assistance honestly and demonstrate the parts of the system you understand and have changed. Additional applications are separate projects and are not implemented by this task.
+The public HTTPS demo is complete: https://opsboard-dina19.vercel.app. A short 60–90 second demonstration video and a software-focused CV can follow after more apps. Pin OpsBoard on the GitHub profile. Describe AI assistance honestly and demonstrate the parts of the system you understand and have changed. Additional applications are separate projects and are not implemented by this task.

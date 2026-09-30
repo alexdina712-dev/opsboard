@@ -55,4 +55,4 @@ Expiring per-person invites, member management, email verification/recovery, att
 
 ## Scope and verification
 
-This is a working portfolio application, not a claim of production certification. Local verification and known limitations are recorded in [docs/VERIFICATION.md](docs/VERIFICATION.md) and the README. Hosting, billing setup, and real-world production operations remain deployment responsibilities.
+This is a working portfolio application, not a claim of production certification. Local verification and known limitations are recorded in [docs/VERIFICATION.md](docs/VERIFICATION.md) and the README. A public demo is deployed at https://opsboard-dina19.vercel.app and passed ten desktop/mobile browser workflows. Ongoing monitoring, backups and real-world production operations remain responsibilities.
