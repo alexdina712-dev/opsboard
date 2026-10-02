@@ -1,3 +1,5 @@
+Latest follow-up: [2 October 2026 QA audit](QA_AUDIT_2026-10-02.md). Earlier counts below record the original delivery.
+
 # Verification record
 
 Local verification completed on **September 30, 2026**. This record distinguishes checks actually run from configuration prepared for another environment.

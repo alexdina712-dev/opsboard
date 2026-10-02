@@ -254,3 +254,7 @@ Visit http://127.0.0.1:4000. The supplied Compose file is explicitly for local d
 Pagination, optimistic concurrency, real-time collaboration, scoped expiring invites, member administration, password recovery, notifications, attachments, organization-specific time zones, accessible browser audits, shared rate limiting, operational monitoring, and database backup/recovery drills.
 
 See [PORTFOLIO_CASE_STUDY.md](PORTFOLIO_CASE_STUDY.md), [docs/API.md](docs/API.md), and [docs/VERIFICATION.md](docs/VERIFICATION.md) for the project narrative, endpoint reference, and verification record.
+
+## Latest quality audit
+
+See [QA audit — 2 October 2026](docs/QA_AUDIT_2026-10-02.md) for expanded device coverage, reproduced fixes, dependency checks and verification limits.
