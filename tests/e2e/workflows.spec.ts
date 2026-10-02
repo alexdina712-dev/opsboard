@@ -1,4 +1,13 @@
 import { test, expect, type Page } from '@playwright/test';
+const browserErrors = new WeakMap<Page, string[]>();
+test.beforeEach(async ({ page }) => {
+  const errors: string[] = [];
+  browserErrors.set(page, errors);
+  page.on('pageerror', (error) => errors.push(error.message));
+});
+test.afterEach(async ({ page }) => {
+  expect(browserErrors.get(page), 'Uncaught browser exceptions').toEqual([]);
+});
 async function demo(page: Page) {
   await page.goto('/login');
   await page.getByRole('button', { name: 'Explore the demo workspace' }).click();

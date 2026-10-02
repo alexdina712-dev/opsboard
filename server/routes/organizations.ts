@@ -170,7 +170,7 @@ organizationRoutes.get(`${base}/tasks`, async (req, res) => {
     ...(filters.due === 'overdue'
       ? {
           dueDate: { lt: new Date() },
-          status: filters.status === 'DONE' ? 'IMPOSSIBLE' : filters.status || { not: 'DONE' },
+          AND: [{ status: { not: 'DONE' } }],
         }
       : filters.due === 'week'
         ? { dueDate: { gte: new Date(), lte: end } }

@@ -15,12 +15,12 @@ app.set('trust proxy', 1);
 app.use(helmet());
 const origin = process.env.APP_ORIGIN || 'http://127.0.0.1:5173';
 app.use(cors({ origin, credentials: true }));
-app.use(express.json({ limit: '32kb' }));
-app.use(cookieParser());
 app.use('/api', (_req, res, next) => {
   res.set('Cache-Control', 'no-store');
   next();
 });
+app.use(express.json({ limit: '32kb' }));
+app.use(cookieParser());
 // Origin verification protects cookie-authenticated mutations, including login CSRF.
 app.use('/api', (req, _res, next) => {
   if (
@@ -57,9 +57,11 @@ app.use(
     if (error instanceof ApiError) return res.status(error.status).json({ error: error.message });
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002')
       return res.status(409).json({ error: 'This email is already registered.' });
+    if (error instanceof Error && 'type' in error && error.type === 'entity.too.large')
+      return res.status(413).json({ error: 'JSON request exceeds the 32 KB limit.' });
     if (error instanceof SyntaxError && 'body' in error)
       return res.status(400).json({ error: 'Invalid JSON request.' });
-    console.error(error);
+    console.error(error instanceof Error ? error.name : 'UnknownError');
     res.status(500).json({ error: 'Something went wrong. Please try again.' });
   },
 );
